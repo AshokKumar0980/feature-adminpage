@@ -34,5 +34,3 @@ build/
 
 ### Local Config ###
 src/main/resources/application.properties
-### Maven Cache ###
-.mvn/
