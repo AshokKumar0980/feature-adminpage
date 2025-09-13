@@ -29,17 +29,15 @@ jobs:
     - name: Make mvnw executable
       run: chmod +x ./mvnw
         
-    - name: Run tests with coverage
-      run: ./mvnw clean test jacoco:report
+    - name: Run tests
+      run: ./mvnw clean test
       
     - name: Upload test results
       uses: actions/upload-artifact@v4
       if: always()
       with:
         name: test-results
-        path: |
-          target/surefire-reports/
-          target/site/jacoco/
+        path: target/surefire-reports/
         retention-days: 30
 
   code-quality:
@@ -60,10 +58,12 @@ jobs:
     - name: Make mvnw executable
       run: chmod +x ./mvnw
         
+    - name: Compile project
+      run: ./mvnw compile
+      
     - name: Run code quality checks
-      run: |
-        ./mvnw compile
-        ./mvnw checkstyle:check || echo "Checkstyle warnings found"
+      run: ./mvnw checkstyle:check || echo "⚠️  Checkstyle warnings found - check logs above"
+      continue-on-error: true
 
   build:
     name: Build Application
