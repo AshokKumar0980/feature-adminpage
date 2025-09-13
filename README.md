@@ -1,9 +1,4 @@
 # MARS API - DNCS Global
-
-[![CI/CD Pipeline](https://github.com/dncsglobal/mars-api/actions/workflows/ci-cd.yml/badge.svg)](https://github.com/dncsglobal/mars-api/actions/workflows/ci-cd.yml)
-[![Java Version](https://img.shields.io/badge/Java-17-orange.svg)](https://openjdk.java.net/projects/jdk/17/)
-[![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.5.4-green.svg)](https://spring.io/projects/spring-boot)
-
 ## Overview
 
 DNCS Global MARS Initiative - API for Project MARS Modules. This Spring Boot application provides REST APIs for managing candidates, jobs, and user operations in the MARS recruitment system.
