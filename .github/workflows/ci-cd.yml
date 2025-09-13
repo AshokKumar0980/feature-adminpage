@@ -141,7 +141,7 @@ jobs:
     - name: Download JAR
       uses: actions/download-artifact@v4
       with:
-        name: mars-api-${{ github.sha }}
+        name: dncs-mars-api
         path: target/
         
     - name: Deploy to production
