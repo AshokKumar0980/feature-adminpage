@@ -90,7 +90,7 @@ jobs:
     - name: Upload JAR artifact
       uses: actions/upload-artifact@v4
       with:
-        name: mars-api-${{ github.sha }}
+        name: dncs-mars-api-jar
         path: target/*.jar
         retention-days: 90
 
@@ -121,7 +121,7 @@ jobs:
     - name: Download JAR
       uses: actions/download-artifact@v4
       with:
-        name: dncs-mars-api-jar
+        name: dncs-mars-api
         path: target/
         
     - name: Deploy to staging
@@ -141,7 +141,7 @@ jobs:
     - name: Download JAR
       uses: actions/download-artifact@v4
       with:
-        name: mars-api-${{ github.sha }}
+        name: dncs-mars-api-jar
         path: target/
         
     - name: Deploy to production
